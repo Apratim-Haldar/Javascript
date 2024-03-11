@@ -78,7 +78,7 @@ console.log(greet("Apratim"));
 
 //enhance object literals
 
-user = (Name, age , work) => {
+const user1 = (Name, age , work) => {
     return {
         Name,
         age,
@@ -89,7 +89,7 @@ user = (Name, age , work) => {
     }
 }
 
-const apratim = user("Apratim", 19, "Student");
+const apratim = user1("Apratim", 19, "Student");
 console.log(apratim.intro());
 
 //ES5 to ES6
@@ -146,3 +146,15 @@ const user = {
 const clone = {...user};
 const arClone = {...ar};
 const ar2Clone = {...ar2};
+
+//rest operator
+
+function Apratim(Age, College, ...hobbies){
+    return {
+        Age: Age,
+        Colleg: College,
+        Hobbies: hobbies,
+    };
+};
+
+console.log(Apratim(19, "IEM:KOLKATA", "Coding", "Gaming", "Chess"));
